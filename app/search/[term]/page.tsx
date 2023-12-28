@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 type Props ={
@@ -6,10 +7,11 @@ type Props ={
     }
 }
 const page = ({params:{term}}:Props) => {
-const termSpaceRemover =decodeURIComponent(term)
+    if(!term) notFound()
+const termSpaceRemover =decodeURI(term)
    
   return (
-    <div>
+    <div>s
       {termSpaceRemover}
     </div>
   )
