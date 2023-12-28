@@ -16,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+{/*Header will be added here*/}
       <body >{children}</body>
     </html>
   )
