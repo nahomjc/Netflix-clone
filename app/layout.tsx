@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Header from '@/components/Header'
+import { ThemeProvider } from '@/components/ThemeProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,9 +17,21 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-{/*Header will be added here*/}
-      <body >{children}</body>
+    <html lang="en"  suppressHydrationWarning>
+
+<body className="dark:bg-[#1A1C29] bg-white">
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+      
+
+          {children}
+              <Header />
+        </ThemeProvider>
+      </body>
     </html>
   )
 }
