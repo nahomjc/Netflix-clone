@@ -26,10 +26,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-      
+     <Header />
 
           {children}
-              <Header />
+             
         </ThemeProvider>
       </body>
     </html>
