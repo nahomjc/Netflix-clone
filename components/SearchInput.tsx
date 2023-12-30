@@ -31,6 +31,7 @@ function SearchInput() {
         // ✅ This will be type-safe and validated.
         console.log(values)
         router.push(`/search/${values.input}`)
+        form.reset()
       }
     
       return (
@@ -44,7 +45,7 @@ function SearchInput() {
                 <Input placeholder="Search.." {...field} />
               </FormControl>
               <FormDescription>
-                This is your public display name.
+                This is your searching feild.
               </FormDescription>
               <FormMessage />
             </FormItem>
