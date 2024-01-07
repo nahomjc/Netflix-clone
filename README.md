@@ -4,7 +4,7 @@
 
 ## Features
 
-* 📺 Streamline access to millions of movies and TV shows.
+* 📺 Streamline access to movies 
 * 🔍 Use Azure AI to search through movie lists.
 * 🌐 Built with Next.js for a smooth, fast experience.
 * ✨ Style with Tailwind CSS and Shadcn UI.
