@@ -1,13 +1,14 @@
+import CarouselBanner from "@/components/CarouselBanner";
 import { getDiscoverMovies } from "@/lib/getMovies";
-import React from "react";
-import CarouselBanner from "./CarouselBanner";
 
 type Props = {
-  id: string;
-  keywords: string;
+  id?: string;
+  keywords?: string;
 };
+
 async function CarouselBannerWrapper({ id, keywords }: Props) {
   const movies = await getDiscoverMovies(id, keywords);
+  console.log(movies, "movie list");
   return <CarouselBanner movies={movies} />;
 }
 
