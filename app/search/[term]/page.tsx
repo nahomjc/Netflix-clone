@@ -20,6 +20,7 @@ async function SearchPage({ params: { term } }: Props) {
   return (
     <div className="max-w-7xl mx-auto">
       <div className="flex flex-col space-y-4 mt-32 xl:mt-42">
+        <h1 className="text-6xl font-bold px-10">Results for {termToUse}</h1>
         <MoviesCarousel movies={movies} title="Movies" isVertical />
         <MoviesCarousel movies={PopularMovies} title="You may also like" />
       </div>
