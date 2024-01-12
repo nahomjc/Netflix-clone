@@ -21,7 +21,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
         )}
       >
         {isVertical
-          ? movies.map((movie) => (
+          ? movies?.map((movie) => (
               <div
                 key={movie.id}
                 className={cn(
