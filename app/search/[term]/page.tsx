@@ -1,3 +1,6 @@
+import Loading from "@/components/Loading";
+import MoviesCarousel from "@/components/MoviesCarousel";
+import { getPopularMovies, getSearchedMovies } from "@/lib/getMovies";
 import { notFound } from "next/navigation";
 import React from "react";
 
@@ -6,11 +9,22 @@ type Props = {
     term: string;
   };
 };
-const SearchPage = ({ params: { term } }: Props) => {
+async function SearchPage({ params: { term } }: Props) {
   if (!term) notFound();
   const termToUse = decodeURI(term);
-
-  return <div>Welcome to the search Page: {termToUse}</div>;
-};
+  const movies = await getSearchedMovies(termToUse);
+  const PopularMovies = await getPopularMovies();
+  if (!movies && PopularMovies) {
+    return <Loading />;
+  }
+  return (
+    <div className="max-w-7xl mx-auto">
+      <div className="flex flex-col space-y-4 mt-32 xl:mt-42">
+        <MoviesCarousel movies={movies} title="Movies" isVertical />
+        <MoviesCarousel movies={PopularMovies} title="You may also like" />
+      </div>
+    </div>
+  );
+}
 
 export default SearchPage;
