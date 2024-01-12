@@ -1,20 +1,16 @@
-import { notFound } from 'next/navigation'
-import React from 'react'
+import { notFound } from "next/navigation";
+import React from "react";
 
-type Props ={
-    params :{
-        term:string
-    }
-}
-const page = ({params:{term}}:Props) => {
-    if(!term) notFound()
-const termSpaceRemover =decodeURI(term)
-   
-  return (
-    <div>s
-      {termSpaceRemover}
-    </div>
-  )
-}
+type Props = {
+  params: {
+    term: string;
+  };
+};
+const SearchPage = ({ params: { term } }: Props) => {
+  if (!term) notFound();
+  const termToUse = decodeURI(term);
 
-export default page
+  return <div>Welcome to the search Page: {termToUse}</div>;
+};
+
+export default SearchPage;
