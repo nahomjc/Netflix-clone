@@ -15,7 +15,7 @@ function MovieCard({ movie }: { movie: Movie }) {
         width={1920}
         height={1080}
         key={movie.id}
-      />
+      />{/*movie card details*/}
     </div>
   );
 }
