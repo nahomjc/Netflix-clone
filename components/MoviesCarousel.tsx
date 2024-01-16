@@ -1,7 +1,10 @@
+"use client";
 import { cn } from "@/lib/utils";
 import { Movie } from "@/typing";
 import React from "react";
 import MovieCard from "./MovieCard";
+import Link from "next/navigation";
+import { useRouter } from "next/navigation";
 
 type Props = {
   title?: string;
@@ -10,9 +13,15 @@ type Props = {
 };
 
 function MoviesCarousel({ title, movies, isVertical }: Props) {
+  const router = useRouter();
+
+  const Navigate = (id: any) => {
+    router.push(`/view/${id}`);
+    console.log(id, "id view");
+  };
   console.log(movies, "list of movies");
   return (
-    <div className="z-50">
+    <div className="">
       <h2 className="text-xl font-bold px-10 py-2">{title}</h2>
       <div
         className={cn(
@@ -29,6 +38,7 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
                     "flex flex-col space-y-5 mb-5 items-center lg:flex-row space-x-5"
                 )}
               >
+                {" "}
                 <MovieCard movie={movie} />
                 <div className="max-w-2xl">
                   <p className="font-bold">
@@ -39,7 +49,16 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
                 </div>
               </div>
             ))
-          : movies?.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+          : movies?.map((movie) => (
+              <div
+                onClick={() => Navigate(movie.id) as any}
+                key={movie.id}
+                className="flex-shrink-0"
+              >
+                {" "}
+                <MovieCard movie={movie} />
+              </div>
+            ))}
         {}
       </div>
     </div>
