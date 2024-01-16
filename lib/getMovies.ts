@@ -2,7 +2,7 @@ import { SearchResults } from "@/typing";
 
 async function fetchFromTMDB(url: URL, cacheTime?: number) {
   url.searchParams.set("include_adult", "false");
-  url.searchParams.set("include_video", "false");
+
   url.searchParams.set("sort_by", "popularity.desc");
   url.searchParams.set("language", "en-US");
   url.searchParams.set("page", "1");
@@ -30,6 +30,7 @@ export async function getDiscoverMovies(id?: string, keywords?: string) {
   id && url.searchParams.set("with_genres", id);
 
   const data = await fetchFromTMDB(url);
+  console.log(data.results, "video test");
   return data.results;
 }
 
@@ -38,6 +39,7 @@ export async function getSearchedMovies(term: string) {
 
   url.searchParams.set("query", term);
   url.searchParams.set("include_adult", "false");
+
   url.searchParams.set("language", "en-US");
   url.searchParams.set("page", "1");
 
@@ -58,23 +60,33 @@ export async function getSearchedMovies(term: string) {
   return data.results;
 }
 
-export async function getUpcomingMovies() {
+export async function getUpcomingMovies(id?: string) {
   const url = new URL("https://api.themoviedb.org/3/movie/upcoming");
   const data = await fetchFromTMDB(url);
+  id && url.searchParams.set("with_genres", id);
 
   return data.results;
 }
 
-export async function getTopRatedMovies() {
+export async function getTopRatedMovies(id?: string) {
   const url = new URL("https://api.themoviedb.org/3/movie/top_rated");
   const data = await fetchFromTMDB(url);
+  id && url.searchParams.set("with_genres", id);
 
   return data.results;
 }
 
-export async function getPopularMovies() {
+export async function getPopularMovies(id?: string) {
   const url = new URL("https://api.themoviedb.org/3/movie/popular");
   const data = await fetchFromTMDB(url);
-
+  id && url.searchParams.set("with_genres", id);
+  console.log(data.results, "pop");
   return data.results;
+}
+export async function getMovies(id: string) {
+  const url = new URL(`https://api.themoviedb.org/3/movie/${id}`);
+  const data = await fetchFromTMDB(url);
+
+  console.log(data, "view by id");
+  return data;
 }
