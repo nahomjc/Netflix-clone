@@ -5,7 +5,7 @@
 ## Features
 
 * 📺 Streamline access to movies 
-* 🔍 Use Azure AI to search through movie lists.
+* 🔍 Search through movie lists.
 * 🌐 Built with Next.js for a smooth, fast experience.
 * ✨ Style with Tailwind CSS and Shadcn UI.
 
@@ -19,13 +19,13 @@ Before you begin, ensure you have met the following requirements:
 
 * You have installed Node.js and npm.
 * You have a TMDB account and API key.
-* You have Azure AI account and API key.
+
 
 ### Installing
 
 1. Clone the repo:
   ```bash
-  git clone https://github.com/nahomjc/Disney-clone-AI-     
+  https://github.com/nahomjc/Netflix-clone.git     
   ```
 2. Navigate to the project directory:
   ```bash
@@ -38,7 +38,7 @@ Before you begin, ensure you have met the following requirements:
 4. Create a `.env` file in the root directory and add your TMDB and Azure AI keys:
   ```bash
   TMDB_API_KEY=your_tmdb_api_key
-  AZURE_AI_API_KEY=your_azure_ai_api_key
+  
   ```
 5. Start the development server:
   ```bash
@@ -57,4 +57,4 @@ This project is licensed under the MIT License. See LICENSE.txt for more details
 
 ## Contact
 
-If you want to contact us, please send an email to info@netflix-clone.com.
+If you want to contact us, please send an email to aslandjc7@gmail.com.
