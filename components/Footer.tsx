@@ -38,7 +38,7 @@ export default function Footer() {
       </div>
       <div className="pb-2">
         <p className="text-center">
-          @2024 All rights reserved by your website.
+          @2024 All rights reserved by Nahom tesfaye.
         </p>
       </div>
     </footer>
