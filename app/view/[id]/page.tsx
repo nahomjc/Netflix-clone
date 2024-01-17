@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+import CarouselBannerWrapper from "@/components/CarouselBannerWrapper";
 
 type Props = {
   params: {
@@ -38,9 +39,17 @@ const page = async ({ params: { id } }: Props) => {
           </p>
           <hr className="mb-3" />
           <p className="">{movie.overview}</p>
-          <Badge variant="destructive" className="mt-4">
-            {movie.status}
-          </Badge>
+          <hr className="mb-3" />
+          <div className="flex space-x-4 mt-4">
+            <Badge variant="destructive">Status : {movie.status}</Badge>
+            <Badge variant="destructive">
+              {" "}
+              Release data :{movie.release_date}
+            </Badge>
+            <Badge>
+              Original language : {movie.original_language.toUpperCase()}
+            </Badge>
+          </div>
         </div>
       </div>
       <div className="flex flex-col space-y-2 xl:mt-48">
