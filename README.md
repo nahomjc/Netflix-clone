@@ -57,4 +57,4 @@ This project is licensed under the MIT License. See LICENSE.txt for more details
 
 ## Contact
 
-If you want to contact us, please send an email to info@netflix-clone.com.
+If you want to contact us, please send an email to aslandjc7@gmail.com.
