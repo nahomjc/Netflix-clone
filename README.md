@@ -38,7 +38,7 @@ Before you begin, ensure you have met the following requirements:
 4. Create a `.env` file in the root directory and add your TMDB and Azure AI keys:
   ```bash
   TMDB_API_KEY=your_tmdb_api_key
-  AZURE_AI_API_KEY=your_azure_ai_api_key
+  
   ```
 5. Start the development server:
   ```bash
