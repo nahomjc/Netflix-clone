@@ -14,8 +14,6 @@ export default async function Home() {
   const popularMovies = await getPopularMovies();
   return (
     <main className="">
-      <h1>my Netflix </h1>
-
       <CarouselBannerWrapper />
 
       <div className="flex flex-col space-y-2 xl:mt-48">
