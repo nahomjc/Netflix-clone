@@ -10,7 +10,7 @@ import Image from "next/image";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import CarouselBannerWrapper from "@/components/CarouselBannerWrapper";
-
+import { HeartIcon } from "@radix-ui/react-icons";
 type Props = {
   params: {
     id: string;
@@ -48,6 +48,9 @@ const page = async ({ params: { id } }: Props) => {
             </Badge>
             <Badge>
               Original language : {movie.original_language.toUpperCase()}
+            </Badge>
+            <Badge>
+              <HeartIcon className="" /> {movie.vote_count}
             </Badge>
           </div>
         </div>
