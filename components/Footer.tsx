@@ -7,9 +7,7 @@ export default function Footer() {
       <div className="container flex flex-wrap items-center justify-center px-4 py-8 mx-auto  lg:justify-between">
         <div className="flex flex-wrap justify-center">
           <ul className="flex items-center space-x-4">
-            <li>
-              <Link href={"/"}>Home</Link>
-            </li>
+            <li></li>
             <li>
               <Link href={"/about"}>About</Link>
             </li>
@@ -38,7 +36,7 @@ export default function Footer() {
       </div>
       <div className="pb-2">
         <p className="text-center">
-          @2024 All rights reserved by Nahom tesfaye.
+          @2024 All rights reserved by💻 Dev JLord👑.
         </p>
       </div>
     </footer>
