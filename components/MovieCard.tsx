@@ -8,7 +8,6 @@ function MovieCard({ movie }: { movie: Movie }) {
 
   const Navigate = (id: any) => {
     router.push(`/view/${id}`);
-    console.log(id, "view for detal");
   };
   return (
     <div className="relative cursor-pointer transform hover:scale-105 transition duration-200 ease-out hover:drop-shadow-lg ">
