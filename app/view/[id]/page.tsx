@@ -21,7 +21,7 @@ const page = async ({ params: { id } }: Props) => {
   const popularMovies = await getPopularMovies();
   const upComingMovies = await getUpcomingMovies();
   const topRatedMovies = await getTopRatedMovies();
-  console.log(movie!.title, "title");
+
   return (
     <div>
       <div className="flex flex-col mt-48 space-y-5 mb-5 items-center lg:flex-row space-x-5 xl:mt-48 justify-center">
