@@ -17,9 +17,8 @@ function MoviesCarousel({ title, movies, isVertical }: Props) {
 
   const Navigate = (id: any) => {
     router.push(`/view/${id}`);
-    console.log(id, "id view");
   };
-  console.log(movies, "list of movies");
+
   return (
     <div className="">
       <h2 className="text-xl font-bold px-10 py-2">{title}</h2>
