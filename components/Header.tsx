@@ -6,6 +6,7 @@ import SearchInput from "./SearchInput";
 import GenreDropdown from "./GenreDropdown";
 import { Button } from "./ui/button";
 import image from "@/public/favicon.png";
+import SignIn from "./SignIn";
 const Header = () => {
   return (
     <header className="fixed w-full z-20 top-0 flex items-center justify-between p-5 bg-gradient-to-t from-gray-200/0 via-gray-900/25 to-gray-900 ">
@@ -23,8 +24,8 @@ const Header = () => {
         <GenreDropdown />
         <SearchInput />
         <ThemToggler />
-        <Button variant="destructive">Sign Up</Button>
-        <Button variant="outline">Login</Button>
+
+        <SignIn />
       </div>
     </header>
   );
