@@ -16,7 +16,7 @@ function SignIn() {
       <DialogTrigger asChild>
         <Button variant="destructive">Sign In</Button>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[400px] sm:max-h-[600px] bg-transparent">
+      <DialogContent className="sm:max-w-[400px] bg-black-200 bg-opacity-80 shadow-lg">
         <DialogHeader>
           <DialogTitle>Sign in</DialogTitle>
           <DialogDescription>Sign In to your Netflix account</DialogDescription>
@@ -38,7 +38,7 @@ function SignIn() {
               htmlFor="Remember"
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-              <Checkbox id="Remember" disabled /> Remember me
+              <Checkbox id="Remember" /> Remember me
             </label>
 
             <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
