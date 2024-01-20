@@ -8,7 +8,7 @@ import Image from "next/image";
 import getImagePath from "@/lib/getImagePath";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-
+import { ArrowBigRight } from "lucide-react";
 Autoplay.globalOptions = { delay: 8000 };
 function CarouselBanner({ movies }: { movies: Movie[] }) {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [Autoplay()]);
@@ -37,7 +37,9 @@ function CarouselBanner({ movies }: { movies: Movie[] }) {
                 <p className="max-w-xl line-clamp-3">{movie.overview}</p>
                 <div className="flex w-full max-w-xl items-center space-x-2">
                   <Input type="email" placeholder="Email" className="h-70" />
-                  <Button variant="destructive">Subscribe</Button>
+                  <Button variant="destructive">
+                    Get Started <ArrowBigRight />
+                  </Button>
                 </div>
               </div>
             </div>
