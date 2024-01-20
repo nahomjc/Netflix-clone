@@ -30,7 +30,7 @@ export async function getDiscoverMovies(id?: string, keywords?: string) {
   id && url.searchParams.set("with_genres", id);
 
   const data = await fetchFromTMDB(url);
-  console.log(data.results, "video test");
+
   return data.results;
 }
 
@@ -77,16 +77,15 @@ export async function getTopRatedMovies(id?: string) {
 }
 
 export async function getPopularMovies(id?: string) {
-  const url = new URL("https://api.themoviedb.org/3/movie/popular");
+  const url = new URL("https://api.themoviedb.org/3/movie/now_playing");
   const data = await fetchFromTMDB(url);
   id && url.searchParams.set("with_genres", id);
-  console.log(data.results, "pop");
+
   return data.results;
 }
 export async function getMovies(id: string) {
   const url = new URL(`https://api.themoviedb.org/3/movie/${id}`);
   const data = await fetchFromTMDB(url);
 
-  console.log(data, "view by id");
   return data;
 }
