@@ -46,7 +46,7 @@ function SignIn() {
             </label>
           </div>
           <div>
-            <span className="text-sm">
+            <span className="text-white dark:text-white text-sm">
               {" "}
               New to Netflix? Sign up now. This page is protected by Google
               reCAPTCHA to ensure youre not a bot. Learn more.
