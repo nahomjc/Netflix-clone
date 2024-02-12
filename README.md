@@ -1,6 +1,6 @@
 # Netflix Clone Project
 
-🎬 Welcome to the repository for our Netflix clone project! This project is built with Next.js, Shadcn, and Tailwind CSS, and uses the TMDB API to fetch movie lists. It also leverages Azure AI for movie searching. Let's dive into what makes this project special! 🚀
+🎬 Welcome to the repository for my Netflix clone project! This project is built with Next.js, Shadcn, and Tailwind CSS, and uses the TMDB API to fetch movie lists. It also leverages Azure AI for movie searching. Let's dive into what makes this project special! 🚀
 
 ## Features
 
